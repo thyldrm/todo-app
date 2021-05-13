@@ -1,11 +1,14 @@
 import React from "react";
 import "./Form.css";
+import TodoHeader from "../TodoHeader/TodoHeader"
 
 const Form = ({ userInput, onInputChange, addItem }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
   return (
+    <>
+    <TodoHeader/>
     <form className="input" onSubmit={handleSubmit}>
       <input
         type="text"
@@ -17,6 +20,7 @@ const Form = ({ userInput, onInputChange, addItem }) => {
         Ekle
       </button>
     </form>
+    </>
   );
 };
 
